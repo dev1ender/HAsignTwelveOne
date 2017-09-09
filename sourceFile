@@ -1,0 +1,5 @@
+create database custom;
+use custom;
+create table temprature_dataset (date String,zipcode int,temprature int) row format delimited fields terminated by ',';
+load data local inpath 'data.txt' into table temprature_dataset; 
+select * from temprature_dataset;
